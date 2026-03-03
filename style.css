@@ -170,6 +170,134 @@ a {
   padding: 0 32px;
 }
 
+.about {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #021336 0%, #8f9198 100%);
+  background-attachment: fixed;
+}
+
+.about__modern-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery__card {
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  padding: 40px;
+  position: relative;
+  clip-path: polygon(0% 0%, 95% 0%, 100% 10%, 100% 100%, 5% 100%, 0% 90%);
+}
+
+.arch-frame {
+  width: 220px;
+  height: 300px;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, #6c63ff, #ff00c8);
+  padding: 6px;
+  border-radius: 120px 120px 20px 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(108, 99, 255, 0.4);
+}
+
+.arch-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 115px 115px 15px 15px;
+  border: 4px solid #1a1a2e;
+}
+
+.name-glow {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  text-align: center;
+  margin-bottom: 5px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.status-tag {
+  color: #a29bfe;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(108, 99, 255, 0.3);
+  padding-bottom: 12px;
+}
+
+.card-header h4 {
+  color: #a29bfe;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #6c63ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #6c63ff;
+}
+
+.bio-text {
+  color: #ffffff !important;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.protocol-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.protocol-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-left: 4px solid #6c63ff;
+  border-radius: 0 15px 15px 0;
+}
+
+.protocol-item label {
+  display: block;
+  font-size: 0.7rem;
+  color: #6c63ff;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.protocol-item p {
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.protocol-item.highlight {
+  background: rgba(108, 99, 255, 0.15);
+  border-left-color: #6c63ff);
+}
+
+@media (max-width: 767px) {
+  .about__modern-gallery { padding: 0 15px; }
+  .protocol-grid { grid-template-columns: 1fr; }
+  .gallery__card { clip-path: none; border-radius: 25px; padding: 30px 20px; }
+  .name-glow { font-size: 1.8rem; }
+}
+
 /* ── SKILLS SECTION ─────────────────────────── */
 .skills {
   padding: 96px 0;
@@ -196,6 +324,8 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+
+
 
 /* ── SKILL CARD ─────────────────────────────── */
 .skill-card {
